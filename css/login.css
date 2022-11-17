@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root{
+    --primaryColor: #142850;
+    --secondaryColor: #27496D;
+    --tertiaryColor: #0C7B93;
+    --quaternaryColor: #00A8CC;
+    --tittleFont:'Playfair Display', serif;;
+    --textFont: 'Montserrat', sans-serif;
+    --textFontSize: 1rem;
+    --tittleFontSize: 1.5rem;
+}
+
+h1{
+    color: var(--quaternaryColor);
+    font-family: var(--textFont) ;
+    
+    font-size: var(--textFontSize);
+} 
+h1::first-letter{
+    text-transform: uppercase ;
+}
