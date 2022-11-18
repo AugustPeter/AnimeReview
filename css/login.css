@@ -23,6 +23,9 @@
 body {
     background: url(https://images.hdqwalls.com/download/akudama-drive-y2-1366x768.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +37,8 @@ body {
 
     background: #22242b;
     max-height: 65vh;
-    min-width: 430px;
+    min-width: 230px;
+    width: 430px;
     max-width: 430px;
     padding: 3% 2%;
     box-shadow: 2px 1px 2px 1px rgba(7, 7, 7, 0.526);
