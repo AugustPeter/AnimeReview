@@ -1,21 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-:root{
-    --primaryColor: #142850;
-    --secondaryColor: #27496D;
-    --tertiaryColor: #0C7B93;
-    --quaternaryColor: #00A8CC;
-    --tittleFont:'Playfair Display', serif;;
-    --textFont: 'Montserrat', sans-serif;
-    --textFontSize: 1rem;
-    --tittleFontSize: 1.5rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-h1{
-    color: var(--quaternaryColor);
-    font-family: var(--textFont) ;
-    
+:root {
+    --primaryColor: #142850;
+    --secondaryColor: #27496D;
+    --loginColor: #27496db2;
+    --tertiaryColor: #0C7B93;
+    --quaternaryColor: #00a8cc;
+    --tittleFont: 'Playfair Display', serif;
+    --textFont: 'Montserrat', sans-serif;
+    --textFontSize: .9rem;
+    --tittleFontSize: 1.8rem;
+    --fontColor: white;
+}
+
+body {
+    background: url(https://images.hdqwalls.com/download/akudama-drive-y2-1366x768.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.center-wrapper {
+
+    background: #22242b;
+    max-height: 65vh;
+    min-width: 430px;
+    max-width: 430px;
+    padding: 3% 2%;
+    box-shadow: 2px 1px 2px 1px rgba(7, 7, 7, 0.526);
+    display: grid;
+    place-items: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    width: 100%;
+}
+
+p,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--textFont);
+    font-size: var(--tittleFontSize);
+    letter-spacing: 1.5px;
+    background: linear-gradient(to right, #27496D, rgb(2, 123, 150));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1rem 0 2.5rem 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.164);
+    filter: brightness(230%);
+    user-select: none;
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, .15);
+    outline: none;
+    width: 90%;
+    height: 2.4rem;
+    padding: 8px;
+    background-color: #1e1f25;
+    color: var(--fontColor);
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: var(--fontColor);
     font-size: var(--textFontSize);
-} 
-h1::first-letter{
-    text-transform: uppercase ;
+    /* letter-spacing: 1px; */
+    transition-duration: 0.45s;
+
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 25px 10px 25px;
+    font-size: 1rem;
+    font-family: var(--textFont);
+    color: var(--fontColor);
+    font-weight: 500;
+    filter: brightness(97%);
+    letter-spacing: 1px;
+    background-color: var(--quaternaryColor);
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.35s;
+    border: 1px solid rgba(0, 0, 0, .15);
+    margin-top: 1.9em;
+}
+
+button:hover {
+    filter: brightness(80%);
+    transition: all .35s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--tittleFont);
+    font-size: .9em;
+    color: var(--fontColor);
+    filter: brightness(85%);
+    letter-spacing: 1px;
+    margin-left: .4rem;
+    margin-top: .5em;
+    transition-duration: 0.45s;
+
+}
+
+a:hover {
+    filter: brightness(110%);
+    transition: all .45s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+    transition-duration: 0.45s;
+
+}
+
+input:focus:-moz-placeholder {
+    /* Firefox 18- */
+    transition-duration: 0.45s;
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    /* Firefox 19+ */
+    transition-duration: 0.45s;
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    transition-duration: 0.45s;
+    color: transparent;
 }
