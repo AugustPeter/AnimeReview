@@ -1,0 +1,77 @@
+
+.modal{
+    width: 650px;
+    height: 300px;
+    background-color: #30343e;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--quaternaryColor);
+}
+p{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.986);
+    font-size: 1.1rem;
+    filter: brightness(90%);
+}
+p,h2,input{
+    font-family: var(--textFont);
+    letter-spacing: 1px;
+}
+.hdois{
+    margin-top: 1.9rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--quaternaryColor);
+    filter: brightness(100%);
+    height: min-content;
+
+}
+.info input{
+    background-color: #22242b7e;
+    border: none;
+    color: rgba(255, 255, 255, 0.678);
+    padding: .2em 4px;
+    border: 1px solid rgba(0, 0, 0, .15);
+
+}
+
+.infoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--quaternaryColor);
+    filter: brightness(90%);
+    
+}
+label{
+    
+    font-family: var(--textFont);
+}
+.pedro{
+    /* position: absolute; */
+    padding-left: 10rem;
+}
+.info{
+    display: flex;
+}
+.info:first-child{
+    gap: 12px;
+}
+.info:nth-child(2){
+    gap: 8px;
+}

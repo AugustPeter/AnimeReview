@@ -1,0 +1,15 @@
+@media (max-width: 460px){
+    *{
+        /* overflow-x: hidden; */
+    }
+    
+    
+}
+
+@media (max-width: 660px){
+    .legenda {
+        padding-bottom: 3.7rem;
+    }
+}
+
+

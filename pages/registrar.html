@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimeReview-Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/root.css">
+    <title>AnimeReview-Cadastro</title>
+    
 </head>
 <body>
     <div class="center-wrapper">
-        <h2>Fazer login</h2>
-        <form action="http://127.0.0.1:5500/pages/home.html" method="post">
+        <h2>Cadastrar</h2>
+        <form action="pages/home.html" method="post">
             <input type="text" name="Name" id="user" placeholder="Usuário"  autocomplete="off" required >
             <input type="password" name="Name" id="password" placeholder="Senha" required >
-            <button type="submit">Entrar</button>
+            <input type="password" name="Name" id="confirm-password" placeholder="Confirme sua senha" required >
+            <button type="submit">Registrar</button>
         </form>
         <br>
-        <a href="pages/registrar.html">Não possui uma conta?</a>
+        <a href="../index.html">Já possui conta?</a>
     </div>
 </body>
 </html>
