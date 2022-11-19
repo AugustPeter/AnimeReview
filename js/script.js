@@ -7,7 +7,7 @@ const lis = document.querySelectorAll('li')
 const header = document.querySelector('header')
 const user = document.querySelector('.user')
 
-
+const loginButton = document.getElementById('button')
 
 
 perfil.addEventListener('click', () =>{
@@ -23,6 +23,11 @@ burgerMenu.addEventListener('click',() =>{
 
     for (const li of lis) {
         li.classList.toggle('active');
-      }
+}
 
+})
+
+
+loginButton.addEventListener('click',() => {
+    window.location.href="https://augustpeter.github.io/AnimeReview/pages/home.html";  
 })

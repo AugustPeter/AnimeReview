@@ -114,23 +114,6 @@ h3{
     letter-spacing: 1px;
 }
 
-/* .burger:hover > div:first-child{
-    transform: rotate(40deg) translate(20%,100%);
-    transition-duration: 0.50s;
-    
-}
-
-.burger:hover > div:nth-child(2){
-    position: absolute;
-    opacity: 0;
-    transition-duration: 0.1s;
-}
-
-.burger:hover > div:nth-child(3){    
-    transition-duration: 0.50s; 
-    transform: rotate(140deg) translate(-10%,10%);
-} */
-
 header ul{
     list-style: none;
     color: var(--quaternaryColor);
@@ -152,4 +135,17 @@ ul li{
 li:hover{
     transition: linear 0.1s;
     filter: brightness(130%);
+}
+
+/*Mobile config*/
+
+@media (max-width: 660px){
+    .legenda {
+        padding-bottom: 3.7rem;
+    }
+}
+@media (max-width: 350px){
+    .legenda h3{
+        font-size: 1.2rem;
+    }
 }
