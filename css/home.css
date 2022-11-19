@@ -59,8 +59,8 @@ header:hover{
     border-radius: 2px;
     background-color: var(--quaternaryColor);
     filter: brightness(120%);
-    transition-duration: 0.50s;
-    transition: all 0.50s linear;
+    transition:  0.1s;
+    /* transition */
 }
 
 .center-wrapper{
@@ -114,9 +114,10 @@ h3{
     letter-spacing: 1px;
 }
 
-.burger:hover > div:first-child{
+/* .burger:hover > div:first-child{
     transform: rotate(40deg) translate(20%,100%);
     transition-duration: 0.50s;
+    
 }
 
 .burger:hover > div:nth-child(2){
@@ -128,7 +129,7 @@ h3{
 .burger:hover > div:nth-child(3){    
     transition-duration: 0.50s; 
     transform: rotate(140deg) translate(-10%,10%);
-}
+} */
 
 header ul{
     list-style: none;

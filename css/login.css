@@ -146,3 +146,6 @@ input:focus:-ms-input-placeholder {
     transition-duration: 0.45s;
     color: transparent;
 }
+input{
+    
+}
