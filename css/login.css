@@ -58,6 +58,7 @@ h2 {
     font-size: var(--tittleFontSize);
     letter-spacing: 1.5px;
     background: linear-gradient(to right, #27496D, rgb(2, 123, 150));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 1rem 0 2.5rem 0;
@@ -86,7 +87,7 @@ input::placeholder {
 
 }
 
-#button {
+#button,.button {
     border: none;
     outline: none;
     padding: 10px 25px 10px 25px;
@@ -104,7 +105,7 @@ input::placeholder {
     margin-top: 1.9em;
 }
 
-#button:hover {
+#button:hover,.button:hover {
     filter: brightness(80%);
     transition: all .35s ease-in-out;
     transition-property: all;
@@ -157,7 +158,4 @@ input:focus::-moz-placeholder {
 input:focus:-ms-input-placeholder {
     transition-duration: 0.45s;
     color: transparent;
-}
-input{
-    
 }
