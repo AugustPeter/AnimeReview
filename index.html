@@ -7,9 +7,13 @@
     <title>AnimeReview-Login</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="../css/root.css">
+    <script src="js/index.js" defer></script>
 </head>
 <body>
-    <div class="center-wrapper">
+    <video autoplay muted loop id="myVideo">
+        <source src="https://cdn.discordapp.com/attachments/792449672480292865/821118901008990278/QxOSE6.mp4" type="video/mp4">
+      </video>
+    <div class="center-wrapper active">
         <h2>Fazer login</h2>
         <form action="https://augustpeter.github.io/AnimeReview/pages/home.html" method="">
             <input type="text" name="Name" id="user" placeholder="Usuário"  autocomplete="off" required >
@@ -17,7 +21,22 @@
             <input type="submit" name="Entrar" id="button" value="Entrar">
         </form>
         <br>
-        <a href="pages/registrar.html">Não possui uma conta?</a>
+        <span  id="signup" >Não possui uma conta?</span>
+
+        
+
+    </div>
+    <div class="register-box ">
+        <h2>Cadastrar</h2>
+        <form action="https://augustpeter.github.io/AnimeReview/index.html" method="">
+            <input type="text" name="Name" id="a" placeholder="Usuário"  autocomplete="off" required >
+            <input type="password" name="Name" id="v" placeholder="Senha" required >
+            <input type="password" name="Name" id="confirm-" placeholder="Confirme sua senha" required >
+            <input type="submit" name="Entrar" class="button" value="Registrar">
+
+        </form>
+        <br>
+        <span id="signin">Já possui conta?</span>
     </div>
 </body>
 </html>

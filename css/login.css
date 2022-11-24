@@ -25,9 +25,11 @@ body {
     width: 100vw;
     height: 100vh;
 }
-
-.center-wrapper {
-
+.center-wrapper{
+    display: none;
+}
+.center-wrapper.active{
+    z-index: 2;
     background: #22242b;
     max-height: 65vh;
     min-width: 230px;
@@ -37,6 +39,7 @@ body {
     box-shadow: 2px 1px 2px 1px rgba(7, 7, 7, 0.526);
     display: grid;
     place-items: center;
+    animation: fade_in_show 0.5s ease-in-out both;
 }
 
 form {
@@ -114,7 +117,7 @@ input::placeholder {
     transition-delay: 0s;
 }
 
-a {
+span {
     text-decoration: none;
     font-family: var(--tittleFont);
     font-size: .9em;
@@ -124,10 +127,10 @@ a {
     margin-left: .4rem;
     margin-top: .5em;
     transition-duration: 0.45s;
-
+    cursor: pointer;
 }
 
-a:hover {
+span:hover {
     filter: brightness(110%);
     transition: all .45s ease-in-out;
     transition-property: all;
@@ -158,4 +161,41 @@ input:focus::-moz-placeholder {
 input:focus:-ms-input-placeholder {
     transition-duration: 0.45s;
     color: transparent;
+}
+
+#myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+.register-box{
+    display: none;
+}
+.register-box.active{
+    z-index: 2;
+    background: #22242b;
+    max-height: 65vh;
+    min-width: 230px;
+    width: 430px;
+    max-width: 430px;
+    padding: 3% 2%;
+    box-shadow: 2px 1px 2px 1px rgba(7, 7, 7, 0.526);
+    display: grid;
+    place-items: center;
+    animation: fade_in_show 0.5s ease-in-out both;
+}
+
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
 }
