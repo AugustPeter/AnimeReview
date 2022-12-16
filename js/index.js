@@ -1,4 +1,13 @@
-
+const videosBg = [
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118881639825429/7BQ1FX.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118901008990278/QxOSE6.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118888624128020/3s326y.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118850154102810/SEIBkz.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118865953783818/EEaCv8.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118873025118228/Ll75aq.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118904322490408/f68lbu.mp4',
+    'https://cdn.discordapp.com/attachments/792449672480292865/821118860651659314/OZJVKJ.mp4'
+]
 
 const registerBox = document.querySelector('.register-box')
 const loginBox = document.querySelector('.center-wrapper')
@@ -16,6 +25,12 @@ const registerButton = document.querySelector('#registerButton')
 
 const name = document.querySelector('#user')
 const password = document.querySelector('#password')
+
+
+//Sorteio e apply do background
+const video = document.querySelector('#myVideo')
+const bg = Math.floor(Math.random() * videosBg.length);
+video.innerHTML = `<source src="${videosBg[bg]}" type="video/mp4">`;
 
 
 //signup

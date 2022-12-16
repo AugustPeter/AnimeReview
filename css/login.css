@@ -14,7 +14,7 @@
 /*--------------------------------------------------*/
 
 body {
-    background: url(https://images.hdqwalls.com/download/akudama-drive-y2-1366x768.jpg);
+    background: var(--primaryColor);
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -24,7 +24,9 @@ body {
     /* align-items: flex-start */
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
+
 .swal2-container{
     /* width: 20px;
     height: auto;
