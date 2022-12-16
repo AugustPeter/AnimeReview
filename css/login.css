@@ -11,6 +11,10 @@
     --tittleFontSize: 1.8rem;
     --fontColor: white;
 }
+*{
+    overflow: hidden;
+
+}
 /*--------------------------------------------------*/
 
 body {
@@ -24,7 +28,6 @@ body {
     /* align-items: flex-start */
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 }
 
 .swal2-container{
