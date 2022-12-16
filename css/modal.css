@@ -1,5 +1,6 @@
 .modal{
     display: none;
+    animation: fade_in_show 0.5s;
 }
 .modal.active{
     width: 650px;
@@ -13,6 +14,7 @@
     padding: 1%;
     display: flex;
     flex-direction: column;
+    animation: fade_in_show 0.5s ;
 }
 
 h2{
@@ -83,6 +85,7 @@ label{
     right: 1.2%;
     font-size: 1.3rem;
     cursor: pointer;
+    
 }
 
 @media (max-width: 700px){
@@ -141,6 +144,7 @@ label{
         top: 6px;
         right: 0;
         height: 6vh;
+        
     }
 }
 
@@ -166,3 +170,14 @@ label{
 
 }
 
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+}

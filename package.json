@@ -1,0 +1,28 @@
+{
+  "name": "animereview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AugustPeter/AnimeReview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AugustPeter/AnimeReview/issues"
+  },
+  "homepage": "https://github.com/AugustPeter/AnimeReview#readme",
+  "dependencies": {
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.6.15"
+  },
+  "type": "module",
+  "devDependencies": {
+    "webpack": "^5.75.0"
+  }
+}

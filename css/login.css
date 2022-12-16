@@ -21,9 +21,15 @@ body {
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: flex-start */
     width: 100vw;
     height: 100vh;
+}
+.swal2-container{
+    /* width: 20px;
+    height: auto;
+    position: absolute;
+    top: 0; */
 }
 .center-wrapper{
     display: none;
@@ -40,6 +46,9 @@ body {
     display: grid;
     place-items: center;
     animation: fade_in_show 0.5s ease-in-out both;
+    position: fixed; 
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 form {
@@ -117,7 +126,7 @@ input::placeholder {
     transition-delay: 0s;
 }
 
-span {
+#signup,#signin{
     text-decoration: none;
     font-family: var(--tittleFont);
     font-size: .9em;
@@ -130,7 +139,7 @@ span {
     cursor: pointer;
 }
 
-span:hover {
+#signup:hover,#signin:hover {
     filter: brightness(110%);
     transition: all .45s ease-in-out;
     transition-property: all;
@@ -186,16 +195,48 @@ input:focus:-ms-input-placeholder {
     display: grid;
     place-items: center;
     animation: fade_in_show 0.5s ease-in-out both;
+    position: fixed; 
+    top: 50%;
+    transform: translateY(-50%);
 }
+.error{
+    border-color: red;
+}
+.passed{
+    border-color: green;
+}
+form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+form div span{
+    position: absolute;
+    right: 10%;
+    top: 55%;
+    transform: translate(50%,-50%);
 
+    margin: 0;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form div i {
+    
+    color: white;
+    filter: brightness(85%);
+    cursor: pointer;
+}
 @keyframes fade_in_show {
     0% {
         opacity: 0;
-        transform: scale(0)
+        /* transform: scale(0) */
     }
 
     100% {
         opacity: 1;
-        transform: scale(1)
+        /* transform: scale(1) */
     }
 }

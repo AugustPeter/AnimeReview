@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimeReview-Login</title>
+    <script src="https://kit.fontawesome.com/3beab7b958.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="../css/root.css">
     <script src="js/index.js" defer></script>
+    <script src="js/sweetalert.js" ></script>
+    <script src="js/popups.js" defer></script>
+
 </head>
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="https://cdn.discordapp.com/attachments/792449672480292865/821118901008990278/QxOSE6.mp4" type="video/mp4">
       </video>
-    <div class="center-wrapper active">
+    <div class="center-wrapper active" >
         <h2>Fazer login</h2>
-        <form action="https://augustpeter.github.io/AnimeReview/pages/home.html" method="">
-            <input type="text" name="Name" id="user" placeholder="Usuário"  autocomplete="off" required >
-            <input type="password" name="Senha" id="password" placeholder="Senha" required >
-            <input type="submit" name="Entrar" id="button" value="Entrar">
+        <form  onsubmit="login()" action="" method="">
+            <input type="text" name="Name" id="user" placeholder="Usuário"  autocomplete="off"  >
+            <div>
+                <input type="password" name="Senha" id="password" placeholder="Senha" required >
+                <span class="icon3"><i  class="fa-regular fa-eye-slash"></i></span>
+            </div>
+            <input  type="submit" name="Entrar" id="button" value="Entrar">
         </form>
         <br>
         <span  id="signup" >Não possui uma conta?</span>
@@ -28,15 +37,22 @@
     </div>
     <div class="register-box ">
         <h2>Cadastrar</h2>
-        <form action="https://augustpeter.github.io/AnimeReview/index.html" method="">
-            <input type="text" name="Name" id="a" placeholder="Usuário"  autocomplete="off" required >
-            <input type="password" name="Name" id="v" placeholder="Senha" required >
-            <input type="password" name="Name" id="confirm-" placeholder="Confirme sua senha" required >
-            <input type="submit" name="Entrar" class="button" value="Registrar">
+        <form  onsubmit="register()" action="" method="">
+            <input type="text" name="Name" id="registerName" placeholder="Usuário"  autocomplete="off" required >
+            <div>
+                <input type="password" name="Name" id="registerPass" placeholder="Senha" required >
+                <span class="icon"><i  class="fa-regular fa-eye-slash"></i></span>
+            </div>
+            <div>
+                <input type="password" name="Name" id="confirmPass" placeholder="Confirme sua senha" required >
+                <span class="icon2"><i  class="fa-regular fa-eye-slash"></i></span>
+            </div>
+            <input id="registerButton" type="submit" name="Entrar" class="button" value="Registrar">
 
         </form>
         <br>
         <span id="signin">Já possui conta?</span>
     </div>
+    
 </body>
 </html>
