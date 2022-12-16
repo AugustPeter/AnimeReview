@@ -55,8 +55,8 @@ function login (){
         }
     })
     if(name.value == userValid.name && password.value == userValid.password){
-        window.location.href = 'https://augustpeter.github.io/pages/home.html'
-
+        window.location.href = 'https://augustpeter.github.io/AnimeReview/pages/home.html'
+        
         let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
         localStorage.setItem('token', token)
     }else{
