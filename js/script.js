@@ -1,5 +1,5 @@
 function notAllowed () {
-    window.location.href = '../index.html'
+    window.location.href = 'https://augustpeter.github.io/AnimeReview/'
 }
 
 if(localStorage.getItem('token') == null){
