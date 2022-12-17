@@ -11,12 +11,12 @@
     <script src="https://kit.fontawesome.com/3beab7b958.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="../css/root.css">
-    <script src="js/index.js" defer></script>
-    <script src="js/sweetalert.js" ></script>
-    <script src="js/popups.js" defer></script>
+    <script src="src/index.js" defer></script>
+    <script src="src/sweetalert.js" ></script>
+    <script src="src/popups.js" defer></script>
 
 </head>
-<body >
+<body onload="videoBackground()" >
     
     <video autoplay muted loop id="myVideo">
         
@@ -27,12 +27,12 @@
             <input type="text" name="Name" id="user" placeholder="Usuário"  autocomplete="off"  >
             <div>
                 <input type="password" name="Senha" id="password" placeholder="Senha" required >
-                <span class="icon3"><i  class="fa-regular fa-eye-slash"></i></span>
+                <span onclick="icon3()" class="icon3"><i  class="fa-regular fa-eye-slash"></i></span>
             </div>
             <input  type="submit" name="Entrar" id="button" value="Entrar">
         </form>
         <br>
-        <span  id="signup" >Não possui uma conta?</span>
+        <span onclick="buttomSignUp()"  id="signup" >Não possui uma conta?</span>
 
         
 
@@ -40,20 +40,20 @@
     <div class="register-box ">
         <h2>Cadastrar</h2>
         <form  onsubmit="register()" action="" method="">
-            <input type="text" name="Name" id="registerName" placeholder="Usuário"  autocomplete="off" required >
+            <input onkeyup="registerNameKeyUp()" type="text" class="registerName" name="Name" id="registerName" placeholder="Usuário"  autocomplete="off" required >
             <div>
-                <input type="password" name="Name" id="registerPass" placeholder="Senha" required >
-                <span class="icon"><i  class="fa-regular fa-eye-slash"></i></span>
+                <input onkeyup="registerPassKeyUp()" type="password" class="registerPass" name="Name" id="registerPass" placeholder="Senha" required >
+                <span onclick="icon1()"  class="icon"><i  class="fa-regular fa-eye-slash"></i></span>
             </div>
             <div>
-                <input type="password" name="Name" id="confirmPass" placeholder="Confirme sua senha" required >
-                <span class="icon2"><i  class="fa-regular fa-eye-slash"></i></span>
+                <input onkeyup="confirmPassKeyUp()" type="password" class="confirmPass" name="Name" id="confirmPass" placeholder="Confirme sua senha" required >
+                <span  onclick="icon2()"  class="icon2"><i  class="fa-regular fa-eye-slash"></i></span>
             </div>
-            <input id="registerButton" type="submit" name="Entrar" class="button" value="Registrar">
+            <input onclick="buttomRegister()" id="registerButton" type="submit" name="Entrar" class="button" value="Registrar">
 
         </form>
         <br>
-        <span id="signin">Já possui conta?</span>
+        <span onclick="buttomSignIn()" id="signin">Já possui conta?</span>
     </div>
     
 </body>

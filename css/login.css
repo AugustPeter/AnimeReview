@@ -29,13 +29,6 @@ body {
     width: 100vw;
     height: 100vh;
 }
-
-.swal2-container{
-    /* width: 20px;
-    height: auto;
-    position: absolute;
-    top: 0; */
-}
 .center-wrapper{
     display: none;
 }

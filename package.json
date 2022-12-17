@@ -1,10 +1,11 @@
 {
+  "type": "module",
   "name": "animereview",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/teste"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,13 @@
   },
   "homepage": "https://github.com/AugustPeter/AnimeReview#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.6.15"
   },
-  "type": "module",
   "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sucrase": "^3.29.0",
     "webpack": "^5.75.0"
   }
 }

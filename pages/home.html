@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/modal.css">
-    <script src="../js/sweetalert.js" ></script>
-    <script src="../js/popups.js" defer></script>
-    <script src="../js/script.js" defer></script>
+    <script src="../src/sweetalert.js" ></script>
+    <script src="../src/popups.js" defer></script>
+    <script src="../src/script.js" defer></script>
+    <script src="../src/index.js" defer></script>
+
 </head>
 <body>
     <header  class="">
@@ -19,15 +21,15 @@
             <a href="write.html">
                 <li class="">Criar review</li>
             </a>
-            <a id="perfil" href="#">
+            <a onclick="perfilFunc()" href="#">
                 <li class="">Perfil</li>
             </a>
-            <a id="exit">
+            <a onclick="exit()" id="exit">
                 <li class="">Sair</li>
             </a>
         </ul>
         <div class="user active">
-            <div class="burger">
+            <div onclick="burgerMenu()" class="burger">
                 <div></div>
                 <div></div>
                 <div></div>  
@@ -66,7 +68,7 @@
             </a>
         </div>
         <div class="modal">
-            <div class="close">
+            <div onclick="perfilClose()" class="close">
                 &#10060
             </div>
             <h2>Administrator</h2>
@@ -77,15 +79,17 @@
             <div class="infoBox">
                 <div class="info">
                     <label for="modalUser">Login:</label>
-                    <input class="pedro" type="text" disabled value="Yang Kai 86">
+                    <input id="modalName" type="text" disabled value="Yang Kai 86">
                 </div>
                 <div class="info">
                     <label for="modalUser">Senha:</label>
-                    <input type="password" disabled value="PEdroLinda">
+                    <input type="password" id="modalPass" disabled value="PEdroLinda">
                 </div>
             </div>
         </div>
     </main>
+    <!-- <script  src="../js/index.js" type="module" defer></script> -->
+
 </body>
 </html>
 
