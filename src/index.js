@@ -19,20 +19,42 @@ function videoBackground (){
 
 //signup
 function register(){
+
+    function verificar(){
+
+    let radio = document.querySelectorAll("input[name^='radio']:checked");     
+    
+    if (radio.length === 1) {
+    
+    return radio[0].value;      
+    }
+    return false;
+}
+
     const registerName = document.querySelector('#registerName')
     const registerPass = document.querySelector('#registerPass')
+    const confirmPass = document.querySelector('#confirmPass')
+
+    if(registerName.value.length <= 3 || registerPass.value.length <= 3 || confirmPass.value != registerPass.value || verificar() == false ){
+        errorAlertCad()
+        return
+    }else{
+        let radioValue = document.querySelector("input[name='radio']:checked");     
+        
+        let user = JSON.parse(localStorage.getItem('user') ?? '[]')
+
+        user.push({ 
+            name: registerName.value,
+            password: registerPass.value,
+            userType: radioValue.value
+        })
+        localStorage.setItem('user', JSON.stringify(user))
+
+        clearForms()
+        backToLogin()
+        alert()
+        }
     
-    let user = JSON.parse(localStorage.getItem('user') ?? '[]')
-
-    user.push({
-        name: registerName.value,
-        password: registerPass.value
-    })
-    localStorage.setItem('user', JSON.stringify(user))
-
-    clearForms()
-    backToLogin()
-    alert()
 }
 
 //signin
@@ -63,12 +85,9 @@ function login (){
         
         let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
         localStorage.setItem('token', token)
-
-        function teste (){
-            const modalName = document.querySelector('#modalName')
-            modalName.value = name.value
-        }
-        teste()
+        localStorage.removeItem('userValid')
+        localStorage.setItem('userValid',JSON.stringify(userValid))
+        
     }else{
         errorAlert()
         name.focus()
@@ -96,6 +115,7 @@ function registerPassKeyUp () {
 
     if(registerPass.value.length <= 3  ){
         registerPass.setAttribute('class', 'error')
+        
     }else{
         registerPass.setAttribute('class', 'passed')
     }
@@ -150,12 +170,14 @@ function clearForms(){
     const registerName = document.querySelector('#registerName')
     const registerPass = document.querySelector('#registerPass')
     const confirmPass = document.querySelector('#confirmPass')
+    let radioValue = document.querySelector("input[name='radio']:checked");     
 
 
     registerName.value = ''
     registerPass.value = ''
     confirmPass.value = ''
-
+    
+    radioValue.checked = false
     registerName.removeAttribute('class', 'passed')
     registerPass.removeAttribute('class', 'passed')
     confirmPass.removeAttribute('class', 'passed')

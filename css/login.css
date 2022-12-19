@@ -188,7 +188,7 @@ input:focus:-ms-input-placeholder {
     min-width: 230px;
     width: 430px;
     max-width: 430px;
-    padding: 3% 2%;
+    padding: 2% 2%;
     box-shadow: 2px 1px 2px 1px rgba(7, 7, 7, 0.526);
     display: grid;
     place-items: center;
@@ -197,6 +197,7 @@ input:focus:-ms-input-placeholder {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .error{
     border-color: red;
 }
@@ -226,6 +227,91 @@ form div i {
     color: white;
     filter: brightness(85%);
     cursor: pointer;
+}
+.checkContainer{
+    display: flex;
+    position: relative;
+    /* padding-left: 35px; */
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    width: 90%;
+    height: 25px;
+    justify-content: space-around;
+    align-items: center;
+}
+.checkContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    left: .7rem;
+    z-index: 2;
+}  
+.checkmark {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border-radius: 50%;
+
+}
+.label{
+    color: white;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    font-family: var(--textFont);
+    text-align: center;
+    height: min-content;
+    display: block;
+    margin-left: 2.8em;
+    cursor: pointer;
+}
+.labelContainer{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* flex-shrink: 1; */
+    height: 25px;
+    align-items: center;
+}
+.registerButton{
+    margin-top: 0px ;
+}
+.register-box h2{
+    margin: 16px 0 35px;
+}
+.labelContainer input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.labelContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.labelContainer .checkmark:after {
+    left: 7.5px;
+    top: 3.5px;
+    width: 4.5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.reCheck:hover ~ .checkmark{
+    background-color: red;
 }
 @keyframes fade_in_show {
     0% {

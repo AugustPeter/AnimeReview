@@ -49,7 +49,24 @@
                 <input onkeyup="confirmPassKeyUp()" type="password" class="confirmPass" name="Name" id="confirmPass" placeholder="Confirme sua senha" required >
                 <span  onclick="icon2()"  class="icon2"><i  class="fa-regular fa-eye-slash"></i></span>
             </div>
-            <input onclick="buttomRegister()" id="registerButton" type="submit" name="Entrar" class="button" value="Registrar">
+            <div class="checkContainer">
+                <div class="labelContainer">
+                    <label class="label" for="admim">Admim</label>
+                    <input  type="radio" value="1" name="radio" id="admim">
+                    <span class="checkmark adCheck"></span>
+                </div>
+                <div class="labelContainer">
+                    <label class="label" for="writer">Writer</label>
+                    <input  type="radio" value="2" name="radio" id="writer">
+                    <span class="checkmark adCheck"></span>
+                </div> 
+                <div class="labelContainer">
+                    <label class="label" for="reader">Reader</label>
+                    <input  type="radio" value="3" name="radio" id="reader">
+                    <span class="checkmark adCheck"></span>
+                </div> 
+            </div>
+            <input onclick="buttomRegister()" id="registerButton" type="submit" name="Entrar" class="button registerButton" value="Registrar">
 
         </form>
         <br>

@@ -23,6 +23,18 @@ function errorAlert () {
         // iconColor: 'green'
     })
 }
+function errorAlertCad () {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Campo em branco e/ou senha não correspondem',
+        showConfirmButton: false,
+        timer: 4000,
+        background: '#22242b',
+        color: '#00a8cc',
+        // iconColor: 'green'
+    })
+}
 function errorAlertPage () {
     Swal.fire({
         position: 'center',
