@@ -253,8 +253,8 @@ form div i {
     display: block;
     position: absolute;
     left: 0;
-    height: 22px;
-    width: 22px;
+    height: 14px;
+    width: 14px;
     background-color: #eee;
     border-radius: 50%;
 
@@ -267,7 +267,7 @@ form div i {
     text-align: center;
     height: min-content;
     display: block;
-    margin-left: 2.8em;
+    margin-left: 2.5em;
     cursor: pointer;
 }
 .labelContainer{
@@ -322,5 +322,20 @@ form div i {
     100% {
         opacity: 1;
         /* transform: scale(1) */
+    }
+}
+
+@media (max-width: 460px) {
+    .center-wrapper.active{
+        max-height: 65vh;
+        min-width: 230px;
+        width: 90vw;
+        max-width: 430px;
+    }
+    .register-box.active{
+        max-height: 65vh;
+        min-width: 230px;
+        width: 90vw;
+        max-width: 430px;
     }
 }

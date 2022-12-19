@@ -4,11 +4,10 @@ function notAllowed () {
     window.location.href = 'https://augustpeter.github.io/AnimeReview/'
 }
 
-if(localStorage.getItem('token') == null){
-    errorAlertPage()
-    setTimeout(notAllowed, 2000)
-}
-
+// if(localStorage.getItem('token') == null){
+//     errorAlertPage()
+//     setTimeout(notAllowed, 2000)
+// }
 if(localStorage.getItem('token') != null){
     perfilData()
 }
