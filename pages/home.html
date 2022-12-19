@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/modal.css">
+    <script src="https://kit.fontawesome.com/3beab7b958.js" crossorigin="anonymous"></script>
+
     <script src="../src/sweetalert.js" ></script>
     <script src="../src/popups.js" defer></script>
     <script src="../src/script.js" defer></script>
@@ -50,6 +52,14 @@
                     <div class="legenda">
                         <h3>O porque Re-zero é o melhor anime</h3>
                     </div>
+                    <div id="imageIcon" class="imageIcon">
+                        <span class="imageIconItem x">
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <span class="imageIconItem">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
                 </div>
             </a>
             <a href="#" target="_self">
@@ -64,6 +74,14 @@
                     <div class="legenda">
                         <h3>Saber, a waifu do natal</h3>
                     </div>
+                    <div id="imageIcon" class="imageIcon">
+                        <span class="imageIconItem x">
+                            <i class="fa-solid fa-pencil "></i>
+                        </span>
+                        <span class="imageIconItem">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
                 </div>
             </a>
         </div>
@@ -71,8 +89,8 @@
             <div onclick="perfilClose()" class="close">
                 &#10060
             </div>
-            <h2>Administrator</h2>
-            <p>Como administrator vc pode ler, criar, editar e excluir reviews </p>
+            <h2 id="modalTittle"></h2>
+            <p id="modalP"></p>
             <br>
             <h3 class="hdois">Seus dados:</h3>
             

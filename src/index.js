@@ -9,12 +9,15 @@ function videoBackground (){
         'https://cdn.discordapp.com/attachments/792449672480292865/821118865953783818/EEaCv8.mp4',
         'https://cdn.discordapp.com/attachments/792449672480292865/821118873025118228/Ll75aq.mp4',
         'https://cdn.discordapp.com/attachments/792449672480292865/821118904322490408/f68lbu.mp4',
-        'https://cdn.discordapp.com/attachments/792449672480292865/821118860651659314/OZJVKJ.mp4'
+        'https://cdn.discordapp.com/attachments/792449672480292865/821118860651659314/OZJVKJ.mp4',
+        'https://cdn.discordapp.com/attachments/792449672480292865/821118862937292822/kwRK39.mp4',
+        'https://cdn.discordapp.com/attachments/792449672480292865/821118898790465586/w64le3.mp4'
     ]
     
     const video = document.querySelector('#myVideo')
     const bg = Math.floor(Math.random() * videosBg.length);
-    video.innerHTML = `<source src="${videosBg[bg]}" type="video/mp4">`;
+    video.innerHTML = `<source src="${videosBg[bg]}" type="video/mp4">
+    `;
 }
 
 //signup
@@ -68,7 +71,8 @@ function login (){
     
     let userValid ={
         name: '',
-        password: ''
+        password: '',
+        userType: ''
     }
     user = JSON.parse(localStorage.getItem('user'))
     
@@ -76,7 +80,8 @@ function login (){
         if (name.value == item.name && password.value == item.password){
             userValid ={
                 name: item.name,
-                password: item.password
+                password: item.password,
+                userType: item.userType
             }
         }
     })
@@ -172,7 +177,6 @@ function clearForms(){
     const confirmPass = document.querySelector('#confirmPass')
     let radioValue = document.querySelector("input[name='radio']:checked");     
 
-
     registerName.value = ''
     registerPass.value = ''
     confirmPass.value = ''
@@ -190,7 +194,19 @@ function backToLogin(){
     registerBox.classList.remove('active')
     loginBox.classList.add('active')
     
+}
+
+function seeBg(){
+    const registerBox = document.querySelector('.register-box')
+    const loginBox = document.querySelector('.center-wrapper')
     
+    if(loginBox.classList.contains('active') ){
+        loginBox.classList.toggle('active')
+    }else if(!loginBox.classList.contains('active') && !registerBox.classList.contains('active')){
+        loginBox.classList.toggle('active')
+    }else if(registerBox.classList.contains('active')){
+        registerBox.classList.toggle('active')
+    }
 }
 
 //events

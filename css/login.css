@@ -13,7 +13,6 @@
 }
 *{
     overflow: hidden;
-
 }
 /*--------------------------------------------------*/
 
@@ -28,6 +27,22 @@ body {
     /* align-items: flex-start */
     width: 100vw;
     height: 100vh;
+}
+.seeBg{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--quaternaryColor);
+    top: 6%;
+    left: 3%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    border: #22242b 2px solid;
+}
+.seeBg i{
+    color: white;
 }
 .center-wrapper{
     display: none;
@@ -228,6 +243,9 @@ form div i {
     filter: brightness(85%);
     cursor: pointer;
 }
+.checkContainer > *{
+    user-select: none;
+}
 .checkContainer{
     display: flex;
     position: relative;
@@ -267,7 +285,7 @@ form div i {
     text-align: center;
     height: min-content;
     display: block;
-    margin-left: 2.5em;
+    margin-left: 2.7em;
     cursor: pointer;
 }
 .labelContainer{
