@@ -3,14 +3,18 @@
 function notAllowed () {
     window.location.href = 'https://augustpeter.github.io/AnimeReview/'
 }
-
-// if(localStorage.getItem('token') == null){
+function onEnter(){
+    // if(localStorage.getItem('token') == null){
 //     errorAlertPage()
 //     setTimeout(notAllowed, 2000)
 // }
 if(localStorage.getItem('token') != null){
+    putReview()
     perfilData()
 }
+
+}
+
 function exit() {
     localStorage.removeItem('token')
     setTimeout(notAllowed, 300)
@@ -56,7 +60,15 @@ function perfilData (){
         modalP.textContent = 'Leitores apenas podem ler reviews '
     }
 }
+function icon4 (){
+    const modalPass = document.querySelector('#modalPass')
 
+    if(modalPass.type === 'password'){
+        modalPass.type = 'text'
+    }else{
+        modalPass.type = 'password'
+    } 
+} 
 function perfilClose () {
     const modal = document.querySelector('.modal')
     modal.classList.remove('active')
@@ -76,3 +88,83 @@ function burgerMenu (){
 }
 
 
+//write pag
+function getReview(){
+    const imageFile = document.getElementById('url')
+    const reviewTittle = document.getElementById('tittle')
+    const reviewTextArea = document.getElementById('textArea')
+    
+    if(imageFile.value == '' || reviewTextArea.value == '' || reviewTittle.value == ''){
+        errorWrite()
+        return
+    }else{
+        let review = JSON.parse(localStorage.getItem('review') ?? '[]')
+
+        review.push({ 
+            url: imageFile.value,
+            reviewTittle: reviewTittle.value,
+            reviewTextArea: reviewTextArea.value
+        })
+        localStorage.setItem('review', JSON.stringify(review))
+    }
+}
+
+function publishButton(){
+    event.preventDefault
+    getReview()
+}
+
+function putReview(){
+    if(localStorage.getItem('review') != null){
+        const imageContainer = document.getElementById('imageContainer')
+        
+        let reviewPush = JSON.parse(localStorage.getItem('review'))
+        let k = 0
+        reviewPush.forEach((item) => {
+            
+            imageContainer.innerHTML += `
+                <div class="content" onload="perfilData()">
+                    <div class="image-box">
+                        <picture>
+                        <source media="">
+                        <img src="${item.url}" alt="thumbnail">
+                        </picture>
+                    </div>
+                
+                    <div class="legenda">
+                        <h3 class="hj "id="${k++}">${item.reviewTittle}</h3>
+                    </div>
+                    <div id="imageIcon" class="imageIcon">
+                        <span class="imageIconItem x">
+                            <i class="fa-solid fa-pencil "></i>
+                        </span>
+                        <span class="imageIconItem" onclick="deleteItem(event)">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
+                </div>
+            `
+        })
+    }else return
+}
+
+function deleteItem(event){
+    let reviewPush = JSON.parse(localStorage.getItem('review'))
+    let target =event.currentTarget.parentNode.parentNode
+    let h3 = target.querySelector('.hj')
+    let h4 = h3.id
+    
+    reviewPush.splice(h4,1)
+    
+    localStorage.setItem("review",JSON.stringify(reviewPush))
+    location.reload();
+    // let deleteTittle = document.getElementById('h3')
+}
+
+// console.log(reviewPush[2].reviewTittle)
+function writePag(){
+    window.location.href = 'https://augustpeter.github.io/AnimeReview/pages/write.html'
+}
+function backToHome(){
+    window.location.href = 'https://augustpeter.github.io/AnimeReview/pages/home.html'
+}

@@ -2,7 +2,7 @@
 function videoBackground (){
 
     const videosBg = [
-        'https://cdn.discordapp.com/attachments/792449672480292865/821118881639825429/7BQ1FX.mp4',
+        'https://cdn.discordapp.com/attachments/502625527572725762/1054558517689864282/anime-anime-girl_4.mp4',
         'https://cdn.discordapp.com/attachments/792449672480292865/821118901008990278/QxOSE6.mp4',
         'https://cdn.discordapp.com/attachments/792449672480292865/821118888624128020/3s326y.mp4',
         'https://cdn.discordapp.com/attachments/792449672480292865/821118850154102810/SEIBkz.mp4',

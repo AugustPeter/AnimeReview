@@ -35,6 +35,18 @@ function errorAlertCad () {
         // iconColor: 'green'
     })
 }
+function errorWrite () {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Campo em branco',
+        showConfirmButton: false,
+        timer: 4000,
+        background: '#22242b',
+        color: '#00a8cc',
+        // iconColor: 'green'
+    })
+}
 function errorAlertPage () {
     Swal.fire({
         position: 'center',
