@@ -128,7 +128,7 @@ function publishButton(){
     
     getReview()
     clearReviewForms()
-    backToHome()
+    // backToHome()
     localStorage.removeItem('reviewEdit')
 }
 
