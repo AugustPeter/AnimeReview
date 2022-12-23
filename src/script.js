@@ -32,6 +32,8 @@ function perfilData (){
     const modalP = document.querySelector('#modalP')
     const imageIcon = document.querySelectorAll('#imageIcon')
     const imageIconItem = document.querySelectorAll('.x')
+    const writeLink = document.querySelector('#writeLink')
+
     let userValid = []
     userValid = JSON.parse(localStorage.getItem('userValid'))
 
@@ -58,6 +60,7 @@ function perfilData (){
     }else{
         modalTittle.textContent = 'Leitor'
         modalP.textContent = 'Leitores apenas podem ler reviews '
+        writeLink.classList.add('disability')
     }
 }
 function icon4 (){
@@ -108,10 +111,23 @@ function getReview(){
         localStorage.setItem('review', JSON.stringify(review))
     }
 }
+function clearReviewForms(){
+    const imageFile = document.getElementById('url')
+    const reviewTittle = document.getElementById('tittle')
+    const reviewTextArea = document.getElementById('textArea')
 
+    imageFile.value = ''
+    reviewTittle.value = ''
+    reviewTextArea.value = ''
+}
 function publishButton(){
     event.preventDefault
+    
     getReview()
+    clearReviewForms()
+    backToHome()
+    localStorage.removeItem('reviewEdit')
+    location.reload()
 }
 
 function putReview(){
@@ -127,20 +143,21 @@ function putReview(){
                     <div class="image-box">
                         <picture>
                         <source media="">
-                        <img src="${item.url}" alt="thumbnail">
+                        <img class="cc" src="${item.url}" alt="thumbnail">
                         </picture>
                     </div>
                 
                     <div class="legenda">
                         <h3 class="hj "id="${k++}">${item.reviewTittle}</h3>
                     </div>
-                    <div id="imageIcon" class="imageIcon">
-                        <span class="imageIconItem x">
+                    <div id="imageIcon" class="imageIcon" >
+                        <span class="imageIconItem " onclick="editReview(event)">
                             <i class="fa-solid fa-pencil "></i>
                         </span>
-                        <span class="imageIconItem" onclick="deleteItem(event)">
+                        <span class="imageIconItem x" onclick="deleteItem(event)">
                             <i class="fa-solid fa-trash"></i>
                         </span>
+                        <div class="disability a">${item.reviewTextArea}</div>
                     </div>
                 </div>
             `
@@ -158,7 +175,34 @@ function deleteItem(event){
     
     localStorage.setItem("review",JSON.stringify(reviewPush))
     location.reload();
+
     // let deleteTittle = document.getElementById('h3')
+}
+function editReview(event){
+    let reviewPush = JSON.parse(localStorage.getItem('review'))
+    let target =event.currentTarget.parentNode.parentNode
+    let h3 = target.querySelector('.cc')
+
+    let reviewSrc = h3.src
+    let reviewTit= target.querySelector('.hj')
+    let reviewArea= target.querySelector('.a')
+    
+    let reviewEdit = {
+        reviewSrc: h3.src,
+        reviewTit: target.querySelector('.hj').textContent,
+        reviewArea: target.querySelector('.a').textContent
+    }
+
+    localStorage.setItem('reviewEdit',JSON.stringify(reviewEdit))
+
+    let target2 =event.currentTarget.parentNode.parentNode
+    let h32 = target2.querySelector('.hj')
+    let h4 = h32.id
+    
+    reviewPush.splice(h4,1)
+    
+    localStorage.setItem("review",JSON.stringify(reviewPush))
+    writePag()
 }
 
 // console.log(reviewPush[2].reviewTittle)

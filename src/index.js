@@ -20,7 +20,8 @@ function videoBackground (){
     `;
 }
 
-//signup
+
+
 function register(){
 
     function verificar(){
@@ -37,7 +38,7 @@ function register(){
     const registerName = document.querySelector('#registerName')
     const registerPass = document.querySelector('#registerPass')
     const confirmPass = document.querySelector('#confirmPass')
-
+    
     if(registerName.value.length <= 3 || registerPass.value.length <= 3 || confirmPass.value != registerPass.value || verificar() == false ){
         errorAlertCad()
         return
@@ -45,7 +46,7 @@ function register(){
         let radioValue = document.querySelector("input[name='radio']:checked");     
         
         let user = JSON.parse(localStorage.getItem('user') ?? '[]')
-
+        
         user.push({ 
             name: registerName.value,
             password: registerPass.value,
@@ -75,7 +76,10 @@ function login (){
         userType: ''
     }
     user = JSON.parse(localStorage.getItem('user'))
-    
+    if(user == null){
+        errorNoUser()
+        return
+    }else{
     user.forEach((item) => {
         if (name.value == item.name && password.value == item.password){
             userValid ={
@@ -84,7 +88,8 @@ function login (){
                 userType: item.userType
             }
         }
-    })
+    })}
+    
     if(name.value == userValid.name && password.value == userValid.password){
         window.location.href = 'https://augustpeter.github.io/AnimeReview/pages/home.html'
         

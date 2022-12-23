@@ -59,5 +59,16 @@ function errorAlertPage () {
         // iconColor: 'green'
     })
 }
-
+function errorNoUser () {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Não há contas cadastradas',
+        showConfirmButton: false,
+        timer: 4000,
+        background: '#22242b',
+        color: '#00a8cc',
+        // iconColor: 'green'
+    })
+}
 // errorAlert()

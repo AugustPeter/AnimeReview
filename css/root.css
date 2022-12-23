@@ -41,3 +41,6 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+.disability{
+    display: none;
+}
