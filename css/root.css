@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-html{
+html {
     scroll-behavior: smooth;
     background-color: #5b5b5b;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
+
 :root {
     --primaryColor: #142850;
     --secondaryColor: #27496D;
@@ -22,25 +24,27 @@ html{
     --tittleFontSize: 1.8rem;
     --fontColor: white;
 }
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-  /* Track */
+/* Track */
 ::-webkit-scrollbar-track {
-    background: transparent; 
+    background: transparent;
 }
 
-  /* Handle */
+/* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
-  /* Handle on hover */
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
-.disability{
+
+.disability {
     display: none;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,68 +12,72 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="../css/root.css">
     <script src="src/index.js" defer></script>
-    <script src="src/sweetalert.js" ></script>
+    <script src="src/sweetalert.js"></script>
     <script src="src/popups.js" defer></script>
 
 </head>
-<body onload="videoBackground()" >
+
+<body onload="videoBackground()">
     <div onclick="seeBg()" class="seeBg">
         <i class="fa-sharp fa-solid fa-eye"></i>
     </div>
     <video autoplay muted loop id="myVideo">
-        
+
     </video>
-    <div class="center-wrapper active" >
+    <div class="center-wrapper active">
         <h2>Fazer login</h2>
-        <form  onsubmit="login()" action="" method="">
-            <input type="text" name="Name" id="user" placeholder="Usuário"  autocomplete="off"  >
+        <form onsubmit="login()" action="" method="">
+            <input type="text" name="Name" id="user" placeholder="Usuário" autocomplete="off">
             <div>
-                <input type="password" name="Senha" id="password" placeholder="Senha" required >
-                <span onclick="icon3()" class="icon3"><i  class="fa-regular fa-eye-slash"></i></span>
+                <input type="password" name="Senha" id="password" placeholder="Senha" required>
+                <span onclick="icon3()" class="icon3"><i class="fa-regular fa-eye-slash"></i></span>
             </div>
-            <input  type="submit" name="Entrar" id="button" value="Entrar">
+            <input type="submit" name="Entrar" id="button" value="Entrar">
         </form>
         <br>
-        <span onclick="buttomSignUp()"  id="signup" >Não possui uma conta?</span>
-
-        
+        <span onclick="buttomSignUp()" id="signup">Não possui uma conta?</span>
 
     </div>
     <div class="register-box ">
         <h2>Cadastrar</h2>
-        <form  onsubmit="register()" action="" method="">
-            <input onkeyup="registerNameKeyUp()" type="text" class="registerName" name="Name" id="registerName" placeholder="Usuário"  autocomplete="off" required >
+        <form onsubmit="register()" action="" method="">
+            <input onkeyup="registerNameKeyUp()" type="text" class="registerName" name="Name" id="registerName"
+                placeholder="Usuário" autocomplete="off" required>
             <div>
-                <input onkeyup="registerPassKeyUp()" type="password" class="registerPass" name="Name" id="registerPass" placeholder="Senha" required >
-                <span onclick="icon1()"  class="icon"><i  class="fa-regular fa-eye-slash"></i></span>
+                <input onkeyup="registerPassKeyUp()" type="password" class="registerPass" name="Name" id="registerPass"
+                    placeholder="Senha" required>
+                <span onclick="icon1()" class="icon"><i class="fa-regular fa-eye-slash"></i></span>
             </div>
             <div>
-                <input onkeyup="confirmPassKeyUp()" type="password" class="confirmPass" name="Name" id="confirmPass" placeholder="Confirme sua senha" required >
-                <span  onclick="icon2()"  class="icon2"><i  class="fa-regular fa-eye-slash"></i></span>
+                <input onkeyup="confirmPassKeyUp()" type="password" class="confirmPass" name="Name" id="confirmPass"
+                    placeholder="Confirme sua senha" required>
+                <span onclick="icon2()" class="icon2"><i class="fa-regular fa-eye-slash"></i></span>
             </div>
             <div class="checkContainer">
                 <div class="labelContainer">
                     <label class="label" for="admim">Admim</label>
-                    <input  type="radio" value="1" name="radio" id="admim">
+                    <input type="radio" value="1" name="radio" id="admim">
                     <span class="checkmark adCheck"></span>
                 </div>
                 <div class="labelContainer">
                     <label class="label" for="writer">Writer</label>
-                    <input  type="radio" value="2" name="radio" id="writer">
+                    <input type="radio" value="2" name="radio" id="writer">
                     <span class="checkmark adCheck"></span>
-                </div> 
+                </div>
                 <div class="labelContainer">
                     <label class="label" for="reader">Reader</label>
-                    <input  type="radio" value="3" name="radio" id="reader">
+                    <input type="radio" value="3" name="radio" id="reader">
                     <span class="checkmark adCheck"></span>
-                </div> 
+                </div>
             </div>
-            <input onclick="buttomRegister()" id="registerButton" type="submit" name="Entrar" class="button registerButton" value="Registrar">
+            <input onclick="buttomRegister()" id="registerButton" type="submit" name="Entrar"
+                class="button registerButton" value="Registrar">
 
         </form>
         <br>
         <span onclick="buttomSignIn()" id="signin">Já possui conta?</span>
     </div>
-    
+
 </body>
+
 </html>

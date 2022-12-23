@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-bt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon-16x16.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/write.css">
     <link rel="stylesheet" href="../css/modal.css">
-    <script  src="../src/script.js" defer></script>
+    <script src="../src/script.js" defer></script>
     <script src="../src/sweetalert.js" defer></script>
     <script src="../src/popups.js" defer></script>
-    <script src="../src/teste.js" defer ></script>
-
+    <script src="../src/write.js" defer></script>
     <title>Document</title>
-    <script>
-       
-    </script>
 </head>
 
-<body>
-    <header  class="">
+<body onload="onEnterWrite()">
+    <header class="">
         <a onclick="backToHome()" class="home" target="_parent">Home</a>
         <ul class="">
             <a id="writeLink" onclick="writePag()">
@@ -38,7 +35,7 @@
             <div class="burger">
                 <div></div>
                 <div></div>
-                <div></div>  
+                <div></div>
             </div>
         </div>
     </header>
@@ -46,29 +43,36 @@
         <!-- <label class="writeLabel" >Enviar imagem</label> -->
         <input placeholder="Digite a url da imagem" id="url" class="tittle" type="text" autocomplete="off" required>
         <input placeholder="Digite o titulo" id="tittle" class="tittle" type="text" required>
-        <textarea name="" id="textArea" cols="4" rows="15" maxlength="500" required sentences placeholder="Escreva seu texto"></textarea>
+        <textarea name="" id="textArea" cols="4" rows="15" maxlength="500" required sentences
+            placeholder="Escreva seu texto"></textarea>
         <input onclick="publishButton()" type="button" id="publish" class="writeLabel" value="Publique sua análise">
     </div>
     <div class="modal">
-        <div class="close">
+        <div onclick="perfilClose()" class="close">
             &#10060
         </div>
-        <h2>Administrator</h2>
-        <p>Como administrator vc pode ler, criar, editar e excluir reviews </p>
+        <h2 id="modalTittle"></h2>
+        <p id="modalP"></p>
         <br>
         <h3 class="hdois">Seus dados:</h3>
-        
+
         <div class="infoBox">
             <div class="info">
                 <label for="modalUser">Login:</label>
-                <input class="pedro" type="text" disabled value="Yang Kai 86">
+                <input id="modalName" type="text" disabled>
             </div>
             <div class="info">
                 <label for="modalUser">Senha:</label>
-                <input type="password" disabled value="PEdroLinda">
+
+                <div>
+                    <input type="password" id="modalPass" disabled>
+                    <span onclick="icon4()" class="icon4"><i class="fa-regular fa-eye-slash"></i></span>
+                </div>
             </div>
         </div>
     </div>
+    </div>
 
 </body>
+
 </html>

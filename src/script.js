@@ -14,7 +14,11 @@ if(localStorage.getItem('token') != null){
 }
 
 }
-
+function onEnterWrite(){
+    if(localStorage.getItem('token') != null){
+        perfilData()
+    }
+}
 function exit() {
     localStorage.removeItem('token')
     setTimeout(notAllowed, 300)
@@ -90,7 +94,6 @@ function burgerMenu (){
 }
 }
 
-
 //write pag
 function getReview(){
     const imageFile = document.getElementById('url')
@@ -127,7 +130,7 @@ function publishButton(){
     clearReviewForms()
     backToHome()
     localStorage.removeItem('reviewEdit')
-    location.reload()
+    setTimeout(location.reload(), 1500)
 }
 
 function putReview(){
@@ -198,9 +201,9 @@ function editReview(event){
     let target2 =event.currentTarget.parentNode.parentNode
     let h32 = target2.querySelector('.hj')
     let h4 = h32.id
-    
+
     reviewPush.splice(h4,1)
-    
+
     localStorage.setItem("review",JSON.stringify(reviewPush))
     writePag()
 }

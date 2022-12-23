@@ -16,11 +16,8 @@ function videoBackground (){
     
     const video = document.querySelector('#myVideo')
     const bg = Math.floor(Math.random() * videosBg.length);
-    video.innerHTML = `<source src="${videosBg[bg]}" type="video/mp4">
-    `;
+    video.innerHTML = `<source src="${videosBg[bg]}" type="video/mp4">`;
 }
-
-
 
 function register(){
 
@@ -29,9 +26,9 @@ function register(){
     let radio = document.querySelectorAll("input[name^='radio']:checked");     
     
     if (radio.length === 1) {
-    
     return radio[0].value;      
     }
+
     return false;
 }
 
@@ -58,7 +55,7 @@ function register(){
         backToLogin()
         alert()
         }
-    
+
 }
 
 //signin
@@ -119,13 +116,12 @@ function registerNameKeyUp () {
 }
 
 function registerPassKeyUp () {
-    
+
     const registerPass = document.querySelector('#registerPass')
-    
 
     if(registerPass.value.length <= 3  ){
         registerPass.setAttribute('class', 'error')
-        
+
     }else{
         registerPass.setAttribute('class', 'passed')
     }
@@ -190,7 +186,6 @@ function clearForms(){
     registerName.removeAttribute('class', 'passed')
     registerPass.removeAttribute('class', 'passed')
     confirmPass.removeAttribute('class', 'passed')
-        
 }
 function backToLogin(){
     const registerBox = document.querySelector('.register-box')
@@ -198,7 +193,6 @@ function backToLogin(){
 
     registerBox.classList.remove('active')
     loginBox.classList.add('active')
-    
 }
 
 function seeBg(){
@@ -236,4 +230,3 @@ function buttomRegister () {
     event.preventDefault()
     register()
 }
-

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,17 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/modal.css">
+    <link rel="shortcut icon" href="../assets/favicon-16x16.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3beab7b958.js" crossorigin="anonymous"></script>
-
-    <script src="../src/sweetalert.js" ></script>
+    <script src="../src/sweetalert.js"></script>
     <script src="../src/popups.js" defer></script>
     <script src="../src/script.js" defer></script>
     <script src="../src/index.js" defer></script>
 
 </head>
+
 <body onload="onEnter()">
-    <header  class="">
+    <header class="">
         <a onclick="backToHome()" class="home" target="_parent">Home</a>
         <ul class="">
             <a id="writeLink" onclick="writePag()">
@@ -34,16 +36,13 @@
             <div onclick="burgerMenu()" class="burger">
                 <div></div>
                 <div></div>
-                <div></div>  
+                <div></div>
             </div>
         </div>
     </header>
     <main>
         <div class="center-wrapper" id="imageContainer">
 
-        
-                
-            
         </div>
         <div class="modal">
             <div onclick="perfilClose()" class="close">
@@ -53,18 +52,18 @@
             <p id="modalP"></p>
             <br>
             <h3 class="hdois">Seus dados:</h3>
-            
+
             <div class="infoBox">
                 <div class="info">
                     <label for="modalUser">Login:</label>
-                    <input id="modalName" type="text" disabled >
+                    <input id="modalName" type="text" disabled>
                 </div>
                 <div class="info">
                     <label for="modalUser">Senha:</label>
-                   
+
                     <div>
-                        <input type="password" id="modalPass" disabled >
-                        <span onclick="icon4()" class="icon4"><i  class="fa-regular fa-eye-slash"></i></span>
+                        <input type="password" id="modalPass" disabled>
+                        <span onclick="icon4()" class="icon4"><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
                 </div>
             </div>
@@ -73,5 +72,5 @@
     <!-- <script  src="../js/index.js" type="module" defer></script> -->
 
 </body>
-</html>
 
+</html>

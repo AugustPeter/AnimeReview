@@ -1,4 +1,4 @@
-function alert () {
+function alert() {
     Swal.fire({
         position: 'center',
         icon: 'success',
@@ -11,7 +11,7 @@ function alert () {
     })
 }
 
-function errorAlert () {
+function errorAlert() {
     Swal.fire({
         position: 'center',
         icon: 'error',
@@ -23,7 +23,7 @@ function errorAlert () {
         // iconColor: 'green'
     })
 }
-function errorAlertCad () {
+function errorAlertCad() {
     Swal.fire({
         position: 'center',
         icon: 'error',
@@ -35,7 +35,7 @@ function errorAlertCad () {
         // iconColor: 'green'
     })
 }
-function errorWrite () {
+function errorWrite() {
     Swal.fire({
         position: 'center',
         icon: 'error',
@@ -47,7 +47,7 @@ function errorWrite () {
         // iconColor: 'green'
     })
 }
-function errorAlertPage () {
+function errorAlertPage() {
     Swal.fire({
         position: 'center',
         icon: 'error',
@@ -59,7 +59,7 @@ function errorAlertPage () {
         // iconColor: 'green'
     })
 }
-function errorNoUser () {
+function errorNoUser() {
     Swal.fire({
         position: 'center',
         icon: 'error',
