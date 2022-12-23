@@ -130,7 +130,6 @@ function publishButton(){
     clearReviewForms()
     backToHome()
     localStorage.removeItem('reviewEdit')
-    setTimeout(location.reload(), 1500)
 }
 
 function putReview(){
@@ -213,5 +212,6 @@ function writePag(){
     window.location.href = 'https://augustpeter.github.io/AnimeReview/pages/write.html'
 }
 function backToHome(){
+    // setTimeout(location.reload(), 4500)
     window.location.href = 'https://augustpeter.github.io/AnimeReview/pages/home.html'
 }
